@@ -48,16 +48,25 @@
 
 ## 部署
 
-登录服务器后，把文件放到：
+推荐从 GitHub 仓库拉取：
 
 ```bash
-~/server-nav
+cd ~
+git clone https://github.com/Yssx-g/Server-guide.git
+cd ~/Server-guide/server-nav
 ```
 
-然后执行：
+如果已经 clone 过：
 
 ```bash
-cd ~/server-nav
+cd ~/Server-guide
+git pull
+cd ~/Server-guide/server-nav
+```
+
+部署或更新：
+
+```bash
 docker rm -f server-nav 2>/dev/null || true
 docker build --no-cache -t server-nav .
 docker run -d --name server-nav --restart unless-stopped -p 8088:80 server-nav
@@ -93,7 +102,9 @@ sudo ufw status
 修改文件后重新构建：
 
 ```bash
-cd ~/server-nav
+cd ~/Server-guide
+git pull
+cd ~/Server-guide/server-nav
 docker rm -f server-nav 2>/dev/null || true
 docker build --no-cache -t server-nav .
 docker run -d --name server-nav --restart unless-stopped -p 8088:80 server-nav

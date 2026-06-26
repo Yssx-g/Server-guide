@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd "$HOME/server-nav"
+cd "$(dirname "$0")"
 
 docker rm -f server-nav 2>/dev/null || true
 docker build --no-cache -t server-nav .
