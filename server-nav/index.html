@@ -3,43 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#08111f" />
+    <meta name="theme-color" content="#0b1220" />
     <title>YSSX 服务器导航</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260626-3" />
   </head>
   <body>
-    <div class="backdrop" aria-hidden="true">
-      <span class="halo halo-a"></span>
-      <span class="halo halo-b"></span>
-      <span class="grid"></span>
-    </div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <main class="shell">
+    <main class="app-shell">
       <nav class="topbar" aria-label="站点导航">
-        <a class="brand" href="./">
+        <a class="brand" href="./" aria-label="YSSX Hub 首页">
           <span class="brand-mark">Y</span>
           <span>YSSX Hub</span>
         </a>
-        <a class="topbar-link" href="./games/">小游戏中心</a>
+        <a class="nav-pill" href="./games/">小游戏中心</a>
       </nav>
 
       <header class="hero">
         <section class="hero-copy">
-          <p class="kicker">yssx.abrdns.com</p>
+          <p class="eyebrow">yssx.abrdns.com</p>
           <h1>服务器导航</h1>
-          <p class="subtitle">一个入口管理你的博客、云盘、阅读器、酒馆项目和本地小游戏中心。卡片只保留一个主跳转，移动端也能快速点开。</p>
+          <p class="subtitle">一个面向手机和桌面的私人服务入口。博客、云盘、阅读器、酒馆项目和小游戏中心都收在这里。</p>
           <div class="hero-actions">
-            <a class="primary-action" href="#services">打开服务面板</a>
-            <a class="secondary-action" href="./games/">玩小游戏</a>
+            <a class="primary-btn" href="#services">查看服务</a>
+            <a class="ghost-btn" href="./games/">进入小游戏中心</a>
           </div>
         </section>
 
-        <section class="hero-panel" aria-label="控制台概览">
-          <img src="./assets/console-hero.svg" alt="服务器控制台插画" />
-          <div class="panel-stats">
-            <span><strong>5</strong> 个入口</span>
-            <span><strong>6</strong> 个小游戏</span>
-            <span class="online"><i></i>Online</span>
+        <section class="status-console" aria-label="服务概览">
+          <div class="console-header">
+            <span class="signal"></span>
+            <strong>Gateway Online</strong>
+          </div>
+          <div class="console-grid">
+            <span><b>5</b><small>服务入口</small></span>
+            <span><b>6</b><small>本地小游戏</small></span>
+            <span><b>8088</b><small>导航端口</small></span>
+          </div>
+          <div class="console-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </section>
       </header>
@@ -47,47 +51,47 @@
       <section id="services" class="services" aria-label="服务器服务">
         <a class="service-card" href="http://yssx.abrdns.com:1234/">
           <img src="./assets/icon-blog.svg" alt="" />
-          <span class="service-body">
+          <span class="service-text">
             <b>博客</b>
             <small>文章、记录和个人主页</small>
           </span>
-          <span class="port">1234</span>
+          <span class="service-tag">1234</span>
         </a>
 
         <a class="service-card" href="http://yssx.abrdns.com:5244/">
           <img src="./assets/icon-cloud.svg" alt="" />
-          <span class="service-body">
+          <span class="service-text">
             <b>云盘</b>
             <small>文件管理、下载和移动端访问</small>
           </span>
-          <span class="port">5244</span>
+          <span class="service-tag">5244</span>
         </a>
 
         <a class="service-card" href="http://yssx.abrdns.com:5000/">
           <img src="./assets/icon-reader.svg" alt="" />
-          <span class="service-body">
+          <span class="service-text">
             <b>阅读器</b>
             <small>RSS 信息流和订阅阅读</small>
           </span>
-          <span class="port">5000</span>
+          <span class="service-tag">5000</span>
         </a>
 
         <a class="service-card" href="http://yssx.abrdns.com:8100/">
           <img src="./assets/icon-tavern.svg" alt="" />
-          <span class="service-body">
+          <span class="service-text">
             <b>酒馆项目</b>
             <small>角色、聊天和创作工作区</small>
           </span>
-          <span class="port">8100</span>
+          <span class="service-tag">8100</span>
         </a>
 
-        <a class="service-card game-card" href="./games/">
+        <a class="service-card service-card-wide" href="./games/">
           <img src="./assets/icon-games.svg" alt="" />
-          <span class="service-body">
+          <span class="service-text">
             <b>小游戏中心</b>
-            <small>贪吃蛇、俄罗斯方块、扫雷、2048 等</small>
+            <small>贪吃蛇、俄罗斯方块、扫雷、记忆翻牌、2048、打砖块</small>
           </span>
-          <span class="port">本地</span>
+          <span class="service-tag">本地</span>
         </a>
       </section>
     </main>
