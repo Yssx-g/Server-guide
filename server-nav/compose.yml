@@ -1,0 +1,7 @@
+services:
+  server-nav:
+    build: .
+    container_name: server-nav
+    restart: unless-stopped
+    ports:
+      - "8088:80"

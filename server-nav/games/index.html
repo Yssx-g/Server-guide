@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b1a" />
+    <title>YSSX 小游戏中心</title>
+    <link rel="stylesheet" href="./games.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-hero">
+        <section>
+          <a class="back-link" href="../">返回服务器导航</a>
+          <p class="kicker">LOCAL MINI GAMES</p>
+          <h1>小游戏中心</h1>
+          <p>全部由本服务器静态托管。无需外链、无需账号，打开网页就能玩。</p>
+        </section>
+        <img src="../assets/game-hero.svg" alt="小游戏手柄插画" />
+      </header>
+
+      <section class="layout">
+        <aside class="catalog" aria-label="小游戏列表">
+          <button class="game-tab active" data-game="snake">
+            <b>贪吃蛇</b><span>经典移动吃豆</span>
+          </button>
+          <button class="game-tab" data-game="tetris">
+            <b>俄罗斯方块</b><span>旋转、消行、堆叠</span>
+          </button>
+          <button class="game-tab" data-game="mines">
+            <b>扫雷</b><span>推理避开地雷</span>
+          </button>
+          <button class="game-tab" data-game="memory">
+            <b>记忆翻牌</b><span>匹配相同图案</span>
+          </button>
+          <button class="game-tab" data-game="tile2048">
+            <b>2048</b><span>滑动合成数字</span>
+          </button>
+          <button class="game-tab" data-game="breakout">
+            <b>打砖块</b><span>挡板反弹小球</span>
+          </button>
+        </aside>
+
+        <section class="play-panel">
+          <div class="panel-head">
+            <div>
+              <span>当前游戏</span>
+              <strong id="gameTitle">贪吃蛇</strong>
+            </div>
+            <div>
+              <span>分数 / 状态</span>
+              <strong id="score">0</strong>
+            </div>
+            <button id="restartBtn" type="button">重新开始</button>
+          </div>
+
+          <section class="game-board active" id="snakeGame" aria-label="贪吃蛇">
+            <canvas id="snakeCanvas" width="420" height="420"></canvas>
+          </section>
+
+          <section class="game-board" id="tetrisGame" aria-label="俄罗斯方块">
+            <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+          </section>
+
+          <section class="game-board" id="minesGame" aria-label="扫雷">
+            <div class="mines-grid" id="minesGrid"></div>
+          </section>
+
+          <section class="game-board" id="memoryGame" aria-label="记忆翻牌">
+            <div class="memory-grid" id="memoryGrid"></div>
+          </section>
+
+          <section class="game-board" id="tile2048Game" aria-label="2048">
+            <div class="tiles" id="tiles"></div>
+          </section>
+
+          <section class="game-board" id="breakoutGame" aria-label="打砖块">
+            <canvas id="breakoutCanvas" width="520" height="360"></canvas>
+          </section>
+
+          <div class="mobile-pad" aria-label="移动端方向控制">
+            <button data-dir="up">上</button>
+            <button data-dir="left">左</button>
+            <button data-dir="down">下</button>
+            <button data-dir="right">右</button>
+          </div>
+          <p class="hint">键盘方向键 / WASD 可控制。手机可以使用底部方向按钮，打砖块也支持拖动挡板。</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="./games.js"></script>
+  </body>
+</html>

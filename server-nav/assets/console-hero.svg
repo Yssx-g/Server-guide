@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">服务器控制台插画</title>
+  <desc id="desc">由服务器核心、服务卡片和发光轨道组成的科技风插画</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1f3b72"/>
+      <stop offset="1" stop-color="#09172d"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" x2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="720" height="520" rx="46" fill="#081426"/>
+  <path d="M68 386 C160 300 250 360 350 280 C462 190 548 246 650 120" fill="none" stroke="#1e40af" stroke-width="2" opacity=".45"/>
+  <path d="M75 405 C176 310 260 392 368 302 C480 208 555 268 664 142" fill="none" stroke="#22d3ee" stroke-width="3" opacity=".55"/>
+  <g filter="url(#glow)">
+    <circle cx="360" cy="244" r="105" fill="#07111f" stroke="url(#cyan)" stroke-width="4"/>
+    <circle cx="360" cy="244" r="70" fill="#0f2442" stroke="#93c5fd" stroke-width="2"/>
+    <path d="M325 242h70M360 207v70" stroke="#67e8f9" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g fill="url(#panel)" stroke="#3b82f6" stroke-width="2">
+    <rect x="78" y="86" width="150" height="92" rx="22"/>
+    <rect x="492" y="72" width="150" height="92" rx="22"/>
+    <rect x="82" y="330" width="160" height="96" rx="22"/>
+    <rect x="484" y="334" width="158" height="96" rx="22"/>
+  </g>
+  <g fill="#dbeafe" font-family="Arial, sans-serif" font-weight="800">
+    <text x="118" y="140" font-size="38">BLOG</text>
+    <text x="528" y="126" font-size="34">DISK</text>
+    <text x="122" y="390" font-size="31">RSS</text>
+    <text x="516" y="390" font-size="30">GAME</text>
+  </g>
+  <g stroke="#67e8f9" stroke-width="4" stroke-linecap="round" opacity=".82">
+    <path d="M228 132h55c28 0 40 18 52 42"/>
+    <path d="M492 118h-54c-34 0-50 25-62 54"/>
+    <path d="M242 378h54c34 0 50-26 62-58"/>
+    <path d="M484 382h-52c-38 0-56-26-70-60"/>
+  </g>
+  <circle cx="153" cy="205" r="8" fill="#34d399"/>
+  <circle cx="565" cy="206" r="8" fill="#f59e0b"/>
+  <circle cx="344" cy="431" r="8" fill="#fb7185"/>
+</svg>
